@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fdfdf9; /* soft warm off-white */
+  --foreground: #1e293b; /* slate-800 */
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-brand-yellow-light: #fef9c3; /* yellow-100 */
+  --color-brand-yellow: #facc15;       /* yellow-400 */
+  --color-brand-yellow-dark: #ca8a04;  /* yellow-600 */
+  
+  --color-brand-blue-light: #dbeafe;   /* blue-100 */
+  --color-brand-blue: #2563eb;         /* blue-600 */
+  --color-brand-blue-dark: #1d4ed8;    /* blue-700 */
+  
+  --animate-float: float 5s ease-in-out infinite;
+  --animate-fade-in-up: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-fade-in: fadeIn 1s ease-out forwards;
+  --animate-pulse-slow: pulseSlow 8s ease-in-out infinite;
+  --animate-rotate-slow: rotateSlow 20s linear infinite;
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-16px);
+    }
+  }
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes pulseSlow {
+    0%, 100% {
+      opacity: 0.15;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.3;
+      transform: scale(1.1);
+    }
+  }
+  @keyframes rotateSlow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Utilities for staggered animation delay */
+.delay-100 {
+  animation-delay: 100ms;
+}
+.delay-200 {
+  animation-delay: 200ms;
+}
+.delay-300 {
+  animation-delay: 300ms;
+}
+.delay-400 {
+  animation-delay: 400ms;
+}
