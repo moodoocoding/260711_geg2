@@ -72,7 +72,7 @@ export default function Home() {
             <li>
               <a
                 id="nav-pokemon-encyclopedia"
-                href="#"
+                href="/dogam"
                 className="text-sm md:text-base font-semibold text-slate-600 hover:text-brand-blue transition-colors duration-200"
               >
                 포켓몬 도감
